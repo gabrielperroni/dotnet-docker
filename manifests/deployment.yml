@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "k8sstudy-edd7"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "k8sstudy-edd7"
+    spec:
+      containers:
+        - name: "k8sstudy-edd7"
+          image: "k8scrstudy.azurecr.io/k8sstudy"
+          ports:
+          - containerPort: 80
